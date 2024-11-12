@@ -1,0 +1,204 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'header';
+    src: url('../font/SixtyfourConvergence.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'h2';
+    src: url('../font/BungeeTint.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'p';
+    src: url('../font/bitterItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'nav';
+    src: url('../font/Prompt-BlackItalic.ttf') format(truetype);
+}
+
+/*
+Stylesheet for countdownProject
+Author: Matt Parisano
+*/
+
+
+/*html style*/
+
+html {
+    background: url(../img/nycStreet.png);
+    background-size: cover;
+    background-attachment: fixed;
+    min-width: 700px;
+    display:block;
+}    
+
+header, section, footer, nav {
+    outline: 2px solid #ff0000;
+}
+
+body {
+    height: 100%;
+    padding:25px;
+}
+
+header {
+    font-family: 'header';
+    display:flex;
+    text-shadow: #fff 0 0 19px;
+    background-image: url(../img/nycHeader.png);
+    background-size: contain;
+}    
+
+nav {
+    background-color: #2897fccc;
+    display: 1 1 flex;
+    flex-direction: column;
+    width:16%;
+    clear:left;
+    float:left;
+}    
+
+section {
+    color:#e5e8e8;
+    background-color: #fa9146bf;
+    display: 1 1 flex;
+    text-align: center;
+    flex-direction: column;
+    width:84%;
+    clear:right;
+    float:right;
+}            
+
+img {
+    box-sizing: border-box;
+    margin:6px;
+    position:relative;
+    display: 1 1 flex;
+    float: right;
+    max-width: 41%;
+    outline: 2px solid #ff0000;
+    transform: translate(0px, -2px)
+}
+
+
+header, footer {
+    width: 100%;
+    background-color: #e0ba4e95;
+    text-align: center;
+    display:table;
+}            
+
+footer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    position: relative;
+}
+
+.countdown{
+    display:flex;
+    justify-content: center;
+    column-gap:1em;
+    background-color: #ffffffb3;
+}
+
+#currentTime {
+    text-align: left;
+    text-shadow: #e5e8e8 1px 0px 2px , #e5e8e8 -1px 0px 2px , #e5e8e8 0px 1px 2px , #e5e8e8 0px -1px 2px;
+}
+
+
+#eventDate {
+    text-align: center;
+    text-shadow: #e5e8e8 2px 0px 2px , #e5e8e8 -2px 0px 2px , #e5e8e8 0px 2px 2px , #e5e8e8 0px -2px 2px;
+    font-size: 1.75em;
+}
+
+/*
+ul and li styles
+CSS selectors be damned. 
+I used <b></b> in the HTML to bold the UL.
+Fight me.
+P.S. Thanks, Christian
+
+Strike that, I was able to figure it out. It's in the CSS now, not the HTML
+*/
+
+ul {
+    margin: 10%;
+    padding:10%
+}
+
+li {
+    font-size: 2.5vh;
+    word-wrap: normal;
+    text-decoration: underline;
+    font-weight: bold;
+    font-style: italic;
+    list-style-type: disc;
+    text-shadow: #b3b3b3 0px 1px 0px , #b3b3b3 -1px -0px 0px;
+}
+
+
+/*
+Does the nav bar NEED to be on the left?
+Idc, it's going over there anyway unless I
+feel like it looks better somewhere else
+*/
+
+/*text and body styles*/
+
+h1 {
+    font-size: 2.75em;
+    text-shadow: #e5e8e8 3px 0px 3px , #e5e8e8 -3px 0px 3px , #e5e8e8 0px 3px 3px , #e5e8e8 0px -3px 3px;
+}                
+
+h2 {
+    font-family: 'h2';
+    text-shadow: #e5e8e8 1px 0px 0px , #e5e8e8 -1px -0px 0px, #e5e8e8 0px 1px 0px , #e5e8e8 0px -1px 0px;
+    background: #ffffff1A;
+    font-size: 2em;
+}            
+
+
+p {
+    font-family: 'p';
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 1.2em;
+}    
+
+.nav{
+    font-family: 'nav';
+    font-weight: bold;
+}
+
+a:visited {
+    color: #F90D00;
+    text-decoration: underline;
+}            
+
+a:hover {
+    color: #0f0;
+    text-decoration: underline;
+}            
+
+a:active {
+    color:#ff0;
+    text-decoration: underline;
+}            
+
+/*
+Putting the footer at the bottom using the ::after pseudo element
+*/
+
+footer::after {
+    clear:both;
+    display:table;
+    content:"";
+}

@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+
+/*
+reset for countdownProject
+Author: Matt Parisano
+*/
+
+header, body, footer {
+   font-size:100%;
+   background: transparent;
+}
+
+header {
+   line-height: 1.2em;
+}
+
+body {
+   line-height: 1.2em;
+}
+
+footer {
+   line-height: 1.2em;
+}
+
+nav a {
+   text-decoration: none;
+}
+ 
